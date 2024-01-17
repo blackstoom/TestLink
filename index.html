@@ -1,6 +1,51 @@
-<html>
-    <head>Test</head>
-    <body>
-        <a href="https://touchngoewallet.onelink.me/8mmV/linkshare">Click Here</a>
+<!doctype html>
+    <head>
+    	<title>[${PLATFORM}][${ENV}]TNG eWallet Test App</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<style>
+    		.container {
+    			position: absolute;
+    			top: 30%;
+    			left: 50%;
+                padding: 10%;
+    			text-align: center;
+    			-moz-transform: translateX(-50%) translateY(-50%);
+    			-webkit-transform: translateX(-50%) translateY(-50%);
+    			transform: translateX(-50%) translateY(-50%);
+    			font-family: helvetica;
+                overflow: auto;
+    		}
+    		.footer {
+    			position: fixed;
+    			left: 0;
+    			bottom: 0;
+    			width: 90%;
+    			text-align: right;
+    		}
+    	</style>
+    </head>
+    
+    <body style="background-color: #F8F8FF">
+    	<div class="container">
+    		<span>
+    			<h3 style="font-size:4vw;" align="center">[${ENV}]${FILE_NAME}</h3>
+    			<p>Platform : <b>${PLATFORM}</b><br/> Branch : ${GIT_BRANCH}<br/> BuildTye : <b>${build_type}</b><br/> SSLVerify : <b>${sslVerifyOffline}</b><br/> Commit ID : ${GIT_COMMIT_SHORT} <br/> Package by ${BUILD_USER_ID}</p>
+                <!-- Button that triggers the JavaScript function -->
+                <button style="font-size:3vw;" align="center" class="button button-primary" id="myButton" onclick="myFunction()">Download App</button>
+
+
+    		</span>
+    	</div>
+    	<div class="footer">
+    		<a href="mailto:tngd.mobile@tngdigital.com.my">by TNG Digital Mobile Team</a></p>
+    	</div>
+        <!-- JavaScript function to be called when the button is clicked -->
+        <script>
+            function myFunction() {
+                // Your JavaScript code goes here
+                setTimeout(function () { window.location = "https://itunes.apple.com/appdir"; }, 250);
+                window.location = "ossresolver://";
+            }
+        </script>
     </body>
 </html>
